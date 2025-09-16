@@ -1,27 +1,31 @@
-import React, { use } from 'react';
+import React, { Suspense, use, useState } from 'react';
 
-const User = ({ fetchUsers }) => {
+const User = ({ usersPromise }) => {
 
-    const userList = use(fetchUsers);
-    console.log(userList);
 
+
+    const [searchTerm, setSearchTerm] = useState("");
+    const usersList = use(usersPromise);
+
+    // filtering by the user name
+    const searchFiltered = usersList.filter((user) => user?.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    
     return (
-        <div className=''>
-            <p>Users: {userList?.length}</p>
-            <div className='grid grid-cols-3 gap-6'>
-                {
-                    userList.map((user) => {
-                        return (
-                            <div key={user?.id} className='bg-sky-200 p-4 rounded-2xl shadow-2xl hover:bg-sky-300 hover:cursor-pointer transition-all duration-300'>
-                                <p>{user?.name}</p>
-                                <p>{user?.email}</p>
-                                <p>{user?.phone}</p>
-                                <p>{user?.address?.city}</p>
-                                <p>{user?.name}</p>
-                            </div>
-                        )
-                    })
-                }
+        <div>
+            <div className='py-5 mb-4 flex justify-between items-center'>
+                <input onChange={(e) => setSearchTerm(e.target.value)} className='w-full border-2 border-sky-300 outline-none rounded text-sky-400 py-3 px-2' placeholder='Search your user name...' type="text" />
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                {searchFiltered.map((user) => {
+                    return (
+                        <div key={user?.id} className='border-2 border-sky-200 p-5 rounded-2xl bg-sky-100'>
+                            <h1 className='text-xl font-semibold'>{user?.name}</h1>
+                            <p className='text-md'>{user?.email}</p>
+                            <p className='text-md'>{user?.phone}</p>
+                            <p className='text-md'>{user?.website}</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     );

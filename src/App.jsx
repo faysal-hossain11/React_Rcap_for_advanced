@@ -3,9 +3,11 @@ import { Suspense } from 'react';
 import './App.css'
 import User from './components/User';
 import Friends from './components/Friends';
-import fetchFriends from '../lib/api';
+// import fetchFriends from '../lib/api';
 import CounterApp from './components/CounterApp';
 import ShowHideToggle from './components/ShowHideToggle';
+import UserGrid from './components/UserGrid';
+
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 //   .then(res => res.json())
 
@@ -18,15 +20,16 @@ import ShowHideToggle from './components/ShowHideToggle';
 
 function App() {
 
-  const friendsPromise = fetchFriends();
+  // const friendsPromise = fetchFriends();
   return (
     <>
       <div className='max-w-[1440px] mx-auto'>
+        <UserGrid />
         {/* show hide component */}
-        <ShowHideToggle />
+        {/* <ShowHideToggle /> */}
 
         {/* this is the counter app section */}
-        <CounterApp />
+        {/* <CounterApp /> */}
         {/* this is the counter app section */}
 
 
@@ -39,9 +42,9 @@ function App() {
 
         {/* this is the friends area for fetch api calling    */}
 
-        <Suspense fallback={<h2>Data Loading...</h2>}>
+        {/* <Suspense fallback={<h2>Data Loading...</h2>}>
           <Friends friendsPromise={friendsPromise} />
-        </Suspense>
+        </Suspense> */}
 
       </div>
     </>
