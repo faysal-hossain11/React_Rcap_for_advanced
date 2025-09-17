@@ -1,11 +1,10 @@
 
 import User from './User';
-import fetchUsers from '../../lib/api';
+import { fetchUsers } from '../../lib/api';
 import { Suspense } from 'react';
 
-
-const usersPromise = fetchUsers();
 const UserGrid = () => {
+    const usersPromise = fetchUsers();
 
     return (
         <div>

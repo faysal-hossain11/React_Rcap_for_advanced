@@ -7,6 +7,7 @@ import Friends from './components/Friends';
 import CounterApp from './components/CounterApp';
 import ShowHideToggle from './components/ShowHideToggle';
 import UserGrid from './components/UserGrid';
+import ProductGrid from './components/ProductGrid';
 
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 //   .then(res => res.json())
@@ -24,7 +25,8 @@ function App() {
   return (
     <>
       <div className='max-w-[1440px] mx-auto'>
-        <UserGrid />
+        <ProductGrid />
+        {/* <UserGrid /> */}
         {/* show hide component */}
         {/* <ShowHideToggle /> */}
 

@@ -2,12 +2,11 @@ import React, { Suspense, use, useState } from 'react';
 
 const User = ({ usersPromise }) => {
 
-
-
     const [searchTerm, setSearchTerm] = useState("");
     const usersList = use(usersPromise);
+    console.log(usersList);
+    
 
-    // filtering by the user name
     const searchFiltered = usersList.filter((user) => user?.name.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return (
@@ -18,11 +17,12 @@ const User = ({ usersPromise }) => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {searchFiltered.map((user) => {
                     return (
-                        <div key={user?.id} className='border-2 border-sky-200 p-5 rounded-2xl bg-sky-100'>
+                        <div key={user?.id} className='border-2 border-sky-200 p-5 rounded-2xl bg-sky-100 group hover:scale-110 hover:shadow-lg transition-all duration-300'>
                             <h1 className='text-xl font-semibold'>{user?.name}</h1>
                             <p className='text-md'>{user?.email}</p>
                             <p className='text-md'>{user?.phone}</p>
                             <p className='text-md'>{user?.website}</p>
+                            <p className='text-md bg-sky-200 py-2 rounded mt-5 pl-3 group-hover:bg-red-300 transition-all duration-300'>{user?.company?.name}</p>
                         </div>
                     )
                 })}
