@@ -8,6 +8,8 @@ import CounterApp from './components/CounterApp';
 import ShowHideToggle from './components/ShowHideToggle';
 import UserGrid from './components/UserGrid';
 import ProductGrid from './components/ProductGrid';
+import { fetchOnlineProducts } from '../lib/api';
+import OnlineProducts from './components/online-product/OnlineProducts';
 
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 //   .then(res => res.json())
@@ -22,10 +24,14 @@ import ProductGrid from './components/ProductGrid';
 function App() {
 
   // const friendsPromise = fetchFriends();
+  const onlineProductsPromise = fetchOnlineProducts();
   return (
     <>
       <div className='max-w-[1440px] mx-auto'>
-        <ProductGrid />
+        <Suspense fallback={<h2 className='text-2xl text-center'>Loading online products...</h2>}>
+          <OnlineProducts onlineProductsPromise={onlineProductsPromise} />
+        </Suspense>
+        {/* <ProductGrid /> */}
         {/* <UserGrid /> */}
         {/* show hide component */}
         {/* <ShowHideToggle /> */}
