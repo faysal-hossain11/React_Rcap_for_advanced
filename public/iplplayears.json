@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "name": "Virat Kohli",
+        "team": "Royal Challengers Bangalore",
+        "role": "Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm medium",
+        "stats": {
+            "matches": 237,
+            "runs": 7263,
+            "wickets": 4,
+            "hundreds": 7
+        },
+        "price_crore_inr": 15,
+        "photo_url": "https://i.ibb.co.com/MDNYWvZT/images-4.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Jasprit Bumrah",
+        "team": "Mumbai Indians",
+        "role": "Bowler",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm fast",
+        "stats": {
+            "matches": 120,
+            "runs": 69,
+            "wickets": 145,
+            "hundreds": 0
+        },
+        "price_crore_inr": 12,
+        "photo_url": "https://i.ibb.co.com/1JfZLMkn/images-5.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Rohit Sharma",
+        "team": "Mumbai Indians",
+        "role": "Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm offbreak",
+        "stats": {
+            "matches": 243,
+            "runs": 6211,
+            "wickets": 15,
+            "hundreds": 1
+        },
+        "price_crore_inr": 16,
+        "photo_url": "https://i.ibb.co.com/cKjTNN2L/images-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "MS Dhoni",
+        "team": "Chennai Super Kings",
+        "role": "Wicketkeeper-Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "N/A",
+        "stats": {
+            "matches": 250,
+            "runs": 5082,
+            "wickets": 0,
+            "hundreds": 0
+        },
+        "price_crore_inr": 12,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Ravindra Jadeja",
+        "team": "Chennai Super Kings",
+        "role": "All-rounder",
+        "batting_style": "Left-handed",
+        "bowling_style": "Slow left-arm orthodox",
+        "stats": {
+            "matches": 226,
+            "runs": 2692,
+            "wickets": 152,
+            "hundreds": 0
+        },
+        "price_crore_inr": 16,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Rashid Khan",
+        "team": "Gujarat Titans",
+        "role": "Bowler",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm legbreak",
+        "stats": {
+            "matches": 109,
+            "runs": 454,
+            "wickets": 139,
+            "hundreds": 0
+        },
+        "price_crore_inr": 15,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Hardik Pandya",
+        "team": "Mumbai Indians",
+        "role": "All-rounder",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm medium-fast",
+        "stats": {
+            "matches": 123,
+            "runs": 2309,
+            "wickets": 53,
+            "hundreds": 0
+        },
+        "price_crore_inr": 15,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Shubman Gill",
+        "team": "Gujarat Titans",
+        "role": "Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "N/A",
+        "stats": {
+            "matches": 91,
+            "runs": 2790,
+            "wickets": 0,
+            "hundreds": 3
+        },
+        "price_crore_inr": 8,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Rishabh Pant",
+        "team": "Delhi Capitals",
+        "role": "Wicketkeeper-Batsman",
+        "batting_style": "Left-handed",
+        "bowling_style": "N/A",
+        "stats": {
+            "matches": 98,
+            "runs": 2838,
+            "wickets": 0,
+            "hundreds": 1
+        },
+        "price_crore_inr": 16,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Sanju Samson",
+        "team": "Rajasthan Royals",
+        "role": "Wicketkeeper-Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "N/A",
+        "stats": {
+            "matches": 152,
+            "runs": 3888,
+            "wickets": 0,
+            "hundreds": 3
+        },
+        "price_crore_inr": 14,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Faf du Plessis",
+        "team": "Royal Challengers Bangalore",
+        "role": "Batsman",
+        "batting_style": "Right-handed",
+        "bowling_style": "N/A",
+        "stats": {
+            "matches": 129,
+            "runs": 4133,
+            "wickets": 0,
+            "hundreds": 1
+        },
+        "price_crore_inr": 7,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Yuzvendra Chahal",
+        "team": "Rajasthan Royals",
+        "role": "Bowler",
+        "batting_style": "Right-handed",
+        "bowling_style": "Right-arm legbreak",
+        "stats": {
+            "matches": 145,
+            "runs": 115,
+            "wickets": 187,
+            "hundreds": 0
+        },
+        "price_crore_inr": 6.5,
+        "photo_url": "https://i.ibb.co.com/NnVX58kd/images-6.jpg"
+    }
+]

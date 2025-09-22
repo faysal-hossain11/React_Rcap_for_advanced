@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OnlineProduct = ({ product }) => {
+const OnlineProduct = ({ product, handleAddToCart }) => {
 
     return (
         <div className='bg-sky-50 border-2 border-sky-300 p-4 rounded-md'>
@@ -9,7 +9,10 @@ const OnlineProduct = ({ product }) => {
             </div>
             <h2>{product.title}</h2>
             <div className='flex gap-4 mt-4'>
-                <button className='bg-sky-200 border-none py-2 rounded-md hover:bg-sky-300 transition-all duration-300 font-semibold w-full'>Add To Cart</button>
+                <button 
+                    className='bg-sky-200 border-none py-2 rounded-md hover:bg-sky-300 transition-all duration-300 font-semibold w-full'
+                    onClick={() => handleAddToCart(product)}
+                    >Add To Cart</button>
                 <button className='bg-sky-200 border-none py-2 rounded-md hover:bg-sky-300 transition-all duration-300 font-semibold w-full'>Favorite</button>
             </div>
         </div>
