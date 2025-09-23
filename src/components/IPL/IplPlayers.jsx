@@ -1,7 +1,16 @@
-import React, { use } from 'react';
+import React, { use,  } from 'react';
 import PlayerCard from './PlayerCard';
 
-const IplPlayers = ({ iplPlayersPromise }) => {
+const IplPlayers = ({ iplPlayersPromise, handlePursesPlayer }) => {
+
+
+    // const [pursesPlayers, setPursesPlayers] = useState([]);
+
+    
+
+
+
+
     const iplPlayers = use(iplPlayersPromise);
     // console.log(iplPlayers);
 
@@ -14,6 +23,7 @@ const IplPlayers = ({ iplPlayersPromise }) => {
                         <PlayerCard
                             key={player?.id}
                             player={player}
+                            handlePursesPlayer={handlePursesPlayer}
                         />
                     )
                 })}

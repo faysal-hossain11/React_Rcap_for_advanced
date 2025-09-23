@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayerCard = ({ player }) => {
+const PlayerCard = ({ player, handlePursesPlayer }) => {
     return (
         <div key={player?.id} className='border p-4 rounded-lg shadow-lg' >
             <div className='w-full h-50 mb-4'>
@@ -17,6 +17,7 @@ const PlayerCard = ({ player }) => {
             <div className='mt-4'>
                 <button
                     className='bg-gray-700 w-full py-2 rounded-md'
+                    onClick={() => handlePursesPlayer(player)}
                 >Choose player</button>
             </div>
         </div>

@@ -13,6 +13,7 @@ import OnlineProducts from './components/online-product/OnlineProducts';
 // import iplPlayersJson from '../public/iplplayears.json';
 import IplPlayers from './components/IPL/IplPlayers';
 import Header from './components/Header';
+import SelectedPlayers from './components/IPL/SelectedPlayers';
 
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 //   .then(res => res.json())
@@ -36,6 +37,13 @@ function App() {
 
   // const friendsPromise = fetchFriends();
   // const onlineProductsPromise = fetchOnlineProducts();
+
+
+
+
+
+
+
   return (
     <>
       <Header />
@@ -60,9 +68,11 @@ function App() {
         {/* IPL Players Section */}
         {toggle ? (
           <Suspense fallback={<h2 className='text-2xl text-center'>Loading IPL Players...</h2>}>
-          <IplPlayers iplPlayersPromise={iplPlayersPromise} />
-        </Suspense>
-        ): <h2>Selected</h2>}
+            <IplPlayers
+              iplPlayersPromise={iplPlayersPromise}
+            />
+          </Suspense>
+        ) : <SelectedPlayers />}
 
 
 
