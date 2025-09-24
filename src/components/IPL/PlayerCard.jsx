@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const PlayerCard = ({ player, handlePursesPlayer }) => {
+const PlayerCard = ({ player, pursesPlayers, setPursesPlayers }) => {
+
+    const [selected, setSelected] = useState(false);
+
+    const handleSelectedPlayer = (player) => {
+        setSelected(true);
+
+        if (selected) {
+            setPursesPlayers([...pursesPlayers, player])
+        }
+    }
+
     return (
-        <div key={player?.id} className='border p-4 rounded-lg shadow-lg' >
+        <div key={player?.id} className='border p-4 rounded-lg shadow-lg'>
             <div className='w-full h-50 mb-4'>
                 <img
                     className='w-full object-cover h-full rounded-md'
@@ -16,9 +27,9 @@ const PlayerCard = ({ player, handlePursesPlayer }) => {
             <p className='mb-2'><span className='font-semibold'>Price (in Crore INR):</span> {player?.price_crore_inr} Cr</p>
             <div className='mt-4'>
                 <button
-                    className='bg-gray-700 w-full py-2 rounded-md'
-                    onClick={() => handlePursesPlayer(player)}
-                >Choose player</button>
+                    className={` w-full py-2 rounded-md ${selected ? "bg-sky-300" : "bg-gray-700"}`}
+                    onClick={() => handleSelectedPlayer(player)}
+                >{selected ? "Selected" : "Choose Player"}</button>
             </div>
         </div>
     );
